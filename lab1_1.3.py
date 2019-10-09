@@ -1,6 +1,5 @@
 # -*- coding: utf8 -*-
 import os
-import numpy as np
 
 
 def vvod(mas):
@@ -17,7 +16,7 @@ def vvod_file(mas):
 			mas.append([int(i) for i in row.split()])
 
 def tempcl():
-	tempcl1=input("Нажмите клавищи space+enter для выхода из программы, или enter для продолжения")
+	tempcl1=input("Нажмите клавиши space+enter для выхода из программы, или enter для продолжения")
 	if tempcl1==' ':
 		return False
 	else:
@@ -104,11 +103,11 @@ while fl:
 		vivod(mas)
 		while fl_loc:
 			i_ch=int(input("Введите номер строки для измениения: "))
-			if i_ch>(len(mas)+1 or i_ch<=0):
+			if i_ch>(len(mas) or i_ch<=0):
 				wrgjo=input("Такой строки не существует, нажмите enter для продолжения")
 			else:
 				j_ch=int(input("Введите номер элемента в строке {} для измениения: ".format(i_ch)))
-				if j_ch>(len(mas[i_ch-1])+1) or j_ch<=0:
+				if j_ch>(len(mas[i_ch-1])) or j_ch<=0:
 					wrgjo=input("Такого элемента не существует, нажмите enter для продолжения")
 				else:
 					mas[i_ch-1][j_ch-1]=int(input("Текущее значение = {} \n Введите новое: ".format(mas[i_ch-1][j_ch-1])))
