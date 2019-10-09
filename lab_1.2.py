@@ -47,6 +47,13 @@ def mn(mas):
 			 
 	print("Минимум: {0}, индекс минимума: {1}, {2}".format(minimum, imax, jmax))
 
+def tempcl():
+	tempcl1=input("Нажмите клавищи space+enter для выхода из программы, или enter для продолжения")
+	if tempcl1==" ":
+		return False
+	else:
+		return True
+
 def vvod(n, m):
 	
 	mas = [[0] * m for i in range(n)]
@@ -110,72 +117,54 @@ while True:
 		break
 
 clear = lambda: os.system('cls')
-l=0
-while True:
+l=True
+while l:
 	clear()
 	d=input("\nВведите действие:\n \t1-вывод элементов массива №1 \n \t2-вывод элементов массива №2 \n \t3-найти максимум элементов массива №1 и вывести его\n \t4-найти максимум элементов массива №2 и вывести его\n \t5-найти минимум элементов массива №1 и вывести его\n \t6-найти минимум элементов массива №2 и вывести его\n \t7-Найти произведение двух массивов\n \t8-Найти сумму двух массивов\n \t9-Найти разность двух массивов\n \tЛюбая другая клавиша-выход из программы\n")
 	if d=="1":
 		clear()
 		vivod(mas_1)
-		tempcl=input("Нажмите клавищи space+enter для выхода из программы, или enter для продолжения")
-		if tempcl==" ":
-			break	
+		l=tempcl()	
 	elif d=="2":
 		clear()
 		vivod(mas_2)
-		tempcl=input("Нажмите клавищи space+enter для выхода из программы, или enter для продолжения")
-		if tempcl==" ":
-			break	
+		l=tempcl()
 	elif d=="3":
 		clear()
 		mx(mas_1)
-		tempcl=input("Нажмите клавищи space+enter для выхода из программы, или enter для продолжения")
-		if tempcl==" ":
-			break	
+		l=tempcl()	
 	elif d=="4":
 		clear()
 		mx(mas_2)
-		tempcl=input("Нажмите клавищи space+enter для выхода из программы, или enter для продолжения")
-		if tempcl==" ":
-			break	
+		l=tempcl()	
 	elif d=="5":
 		clear()
 		mn(mas_1)
-		tempcl=input("Нажмите клавищи space+enter для выхода из программы, или enter для продолжения")
-		if tempcl==" ":
-			break	
+		l=tempcl()	
 	elif d=="6":
 		clear()
 		mn(mas_2)
-		tempcl=input("Нажмите клавищи space+enter для выхода из программы, или enter для продолжения")
-		if tempcl==" ":
-			break	
+		l=tempcl()	
 	elif d=="7":
 		mas_3 = [[0] * m for i in range(n)]
 		mas_3=proizved(mas_1, mas_2, n, m)
 		clear()	
 		vivod(mas_3)
-		tempcl=input("Нажмите клавищи space+enter для выхода из программы, или enter для продолжения")
-		if tempcl==" ":
-			break	
+		l=tempcl()	
 	elif d=="8":
 		mas_3 = [[0] * m for i in range(n)]
 		mas_3=summa(mas_1, mas_2, n, m)
 		clear()	
 		vivod(mas_3)
-		tempcl=input("Нажмите клавищи space+enter для выхода из программы, или enter для продолжения")
-		if tempcl==" ":
-			break
+		l=tempcl()
 	elif d=="9":
 		mas_3 = [[0] * m for i in range(n)]
 		mas_3=raznost(mas_1, mas_2, n, m)
 		clear()
 		vivod(mas_3)
-		tempcl=input("Нажмите клавищи space+enter для выхода из программы, или enter для продолжения")
-		if tempcl==" ":
-			break		
+		l=tempcl()		
 	else:
-		break
+		l=False
 
 
 
