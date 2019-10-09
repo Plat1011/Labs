@@ -116,9 +116,9 @@ while fl:
 					open('file3.txt', 'w').close()
 					with open('file3.txt', 'w') as f:
 						for row in mas:
-							for elem in mas:
+							for elem in row:
 								f.write(str(elem)+' ')
-							
+							f.write("\n")
 		fl=tempcl()
 					
 				
